@@ -1,2 +1,2 @@
-./redis-sentinel/config/sentinel.conf
-./redis-server/config/server.conf
+redis-sentinel/config/sentinel.conf
+redis-server/config/server.conf
