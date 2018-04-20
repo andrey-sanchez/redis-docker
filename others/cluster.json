@@ -1,0 +1,25 @@
+{
+    "environment": "prod",
+    "clusterName": "redis",
+    "instances": [
+        {
+            "name": "redis-01",
+            "publicAddr": "192.168.1.2",
+            "privateAddr": "192.168.1.2",
+            "fqdn": "redis-01"
+        },
+        {
+            "name": "redis-02",
+            "publicAddr": "192.168.1.3",
+            "privateAddr": "192.168.1.3",
+            "fqdn": "redis-02"
+        }
+    ],
+    "instanceInfo": {
+        "name": "redis-00",
+        "publicAddr": "192.168.1.1",
+        "privateAddr": "192.168.1.1",
+        "fqdn": "redis-00"
+    },
+    "context": "redis"
+}

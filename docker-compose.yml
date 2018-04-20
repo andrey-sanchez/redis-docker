@@ -1,0 +1,25 @@
+version: "2"
+services: 
+  server:
+    build: ./redis-server
+    image: "redis-server:4.0.9"
+    container_name: redis-server
+    ports: 
+      - "6379:6379"
+    volumes: 
+      - ./redis-server/config/server.conf:/root/server.conf
+    restart: always
+    networks: ["redis"]
+  sentinel:
+    build: ./redis-sentinel
+    image: "redis-sentinel:4.0.9"
+    container_name: redis-sentinel
+    ports: 
+      - "26379:26379"
+    volumes: 
+      - ./redis-sentinel/config/sentinel.conf:/root/sentinel.conf
+    depends_on: ["server"]
+    restart: always
+    networks: ["redis"]
+networks: 
+  redis:
