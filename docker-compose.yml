@@ -26,7 +26,7 @@ services:
     image: "redis-stats:0.4.14"
     container_name: redis-stats
     ports: 
-      - "7000:63790"
+      - "9000:63790"
     depends_on: ["server", "sentinel"]
     restart: always
     networks: ["redis"]
